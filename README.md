@@ -1,5 +1,5 @@
 # FischertechnikInterface
-Arduino Lib to Control a classic Fischertechnik Computing Interfaces.
+Arduino Lib to Control a classic parallel Fischertechnik Computing Interfaces.
 
 It works with the following Interfaces:
 
