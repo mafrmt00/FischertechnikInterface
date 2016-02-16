@@ -19,3 +19,5 @@ DATA OUT    | 11            | D6
 CLOCK       | 12            | D7
             |               | A0
             |               | A1
+
+The Digital I/O is done through the shift-registers on the interface, whilst the analog inputs are directly connected to the Arduino analog inputs.
