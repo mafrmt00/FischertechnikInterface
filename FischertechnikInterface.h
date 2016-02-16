@@ -1,3 +1,31 @@
+/*
+ *  Arduino Lib to Control a classic parallel Fischertechnik(r) Computing Interfaces.
+ *  Original code by Manfred Amann February 2016
+ *  
+ *
+ * The MIT License (MIT)
+ * 
+ * Copyright (c) 2016 Manfred Amann
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
 #ifndef FischertechnikInterface_h_
 #define FischertechnikInterface_h_
 
@@ -8,7 +36,7 @@
 #endif
 
 //Should a Interrupt be used?
-#define FT_LIB_USE_T0
+#define FT_LIB_USE_TIMER
 
 //Arduino Pins for Fischer Interface 
 #define FT_DATA_IN  3 //Connector #3

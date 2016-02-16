@@ -29,20 +29,30 @@ FischerFace::FischerFace(void) : iOutputBits (8)
 	//initialize static instance pointer
 	pInstance = this;
 	
-#ifdef FT_LIB_USE_T0
+#ifdef FT_LIB_USE_TIMER
+
+#if defined(__AVR__)
 	// Timer0 is already used for millis() - we'll just interrupt somewhere
 	// in the middle and call the "Compare A" function below
 	OCR0A = 0xAF;
 	TIMSK0 |= _BV(OCIE0A);
+#else
+# error "FT_LIB_USE_TIMER is active, but no Timer is implemented on this Platform."
+#endif
+
 #endif
 }
 
-#ifdef FT_LIB_USE_T0
+#ifdef FT_LIB_USE_TIMER
+
+#if defined(__AVR__)
 // Interrupt is called once a millisecond, 
 SIGNAL(TIMER0_COMPA_vect) 
 {
 	FischerFace::CyclicTask();
 }
+#endif
+
 #endif
 
 //Set the Direction of one Motor, Motor Number is given as 1 based int.
